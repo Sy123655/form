@@ -11,7 +11,7 @@ const LoginForm = () => {
   const onFinish = () => {};
   return (
     <Form form={form} name="login" onFinish={onFinish}>
-      <Form.Item name="email" label="E-mail" valuePropName="email" style={{ width:"400px" }}
+      <Form.Item name="email" label="E-mail"  style={{ width:"400px" }}
       rules={[
         {
           
