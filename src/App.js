@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import ValidationForm from "./components/ValidationForm";
+import LoginForm from "./components/ValidationForm";
+
 
 
 
@@ -11,7 +12,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ValidationForm />
+        <h1>Login Form Reactjs with AntDesgin</h1>
+        <LoginForm />
       </div>
     );
   }
