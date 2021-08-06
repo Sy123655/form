@@ -7,25 +7,27 @@ import "antd/dist/antd.css";
 
 
 const LoginForm = () => {
+
   const [form] = Form.useForm();
   const onFinish = () => {};
   return (
-    <Form form={form} name="login" onFinish={onFinish}>
-      <Form.Item name="email" label="E-mail"  style={{ width:"400px" }}
+    <Form form={form} name="login"  onFinish={onFinish}>
+      <Form.Item name="email"  label="E-mail" style={{ width:"400px" }}
       rules={[
-        {
-          
-        type: "email",
-        message:"The input is not valid E-mail",
-        
-        },
+        {  
+          required: true,
+          pattern: new RegExp("[^$,^,#,!,^,&,*,(,)]"),
+          type: "email",
+          message:"The input is not valid E-mail",
+          },
         {
           required: true,
           message:"Please input your E-mail",
         }
       ]}
       >
-        <Input />
+        <Input 
+             />
       </Form.Item>
       <Form.Item name="password" label="Password" style={{ width:"400px" }}
       rules={[
